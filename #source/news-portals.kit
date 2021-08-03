@@ -611,6 +611,113 @@
           </div>
         </div>
       </section>
+      <section class="main_news_container bg-white">
+        <div class="container">
+          <h2 class="subTitle">Отзывы</h2>
+          <div class="news-sl2 video_slider">
+            <div class="js-video-button">
+              <div class="news-item" data-video-id="wuM_qYaaWUQ">
+                <div class="video_img_block">
+                  <div class="play_icon">
+                    <img class="play_img" src="img/icon/play-blue.svg" alt="" />
+                  </div>
+                  <img src="img/main/news1.png" alt="" />
+                </div>
+                <div class="name_img_background">
+                  <img class="director_img" src="img/icon/avatar.png" alt="" />
+                  <div class="text">
+                    <h3>Имя Фамилия</h3>
+                    <p>
+                      Директор по информационным технологиям Buginnen Basta.
+                    </p>
+                    <img
+                      class="video_label_icon"
+                      src="img/icon/buginmenIconVideo.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="js-video-button">
+              <div class="news-item" data-video-id="wuM_qYaaWUQ">
+                <div class="video_img_block">
+                  <div class="play_icon">
+                    <img class="play_img" src="img/icon/play-blue.svg" alt="" />
+                  </div>
+                  <img src="img/main/news1.png" alt="" />
+                </div>
+                <div class="name_img_background">
+                  <img class="director_img" src="img/icon/avatar.png" alt="" />
+                  <div class="text">
+                    <h3>Имя Фамилия</h3>
+                    <p>
+                      Директор по информационным технологиям Buginnen Basta.
+                    </p>
+                    <img
+                      class="video_label_icon"
+                      src="img/icon/buginmenIconVideo.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="js-video-button">
+              <div class="news-item" data-video-id="wuM_qYaaWUQ">
+                <div class="video_img_block">
+                  <div class="play_icon">
+                    <img class="play_img" src="img/icon/play-blue.svg" alt="" />
+                  </div>
+                  <img src="img/main/news1.png" alt="" />
+                </div>
+                <div class="name_img_background">
+                  <img class="director_img" src="img/icon/avatar.png" alt="" />
+                  <div class="text">
+                    <h3>Имя Фамилия</h3>
+                    <p>
+                      Директор по информационным технологиям Buginnen Basta.
+                    </p>
+                    <img
+                      class="video_label_icon"
+                      src="img/icon/buginmenIconVideo.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="js-video-button">
+              <div class="news-item" data-video-id="wuM_qYaaWUQ">
+                <div class="video_img_block">
+                  <div class="play_icon">
+                    <img class="play_img" src="img/icon/play-blue.svg" alt="" />
+                  </div>
+                  <img src="img/main/news1.png" alt="" />
+                </div>
+                <div class="name_img_background">
+                  <img class="director_img" src="img/icon/avatar.png" alt="" />
+                  <div class="text">
+                    <h3>Имя Фамилия</h3>
+                    <p>
+                      Директор по информационным технологиям Buginnen Basta.
+                    </p>
+                    <img
+                      class="video_label_icon"
+                      src="img/icon/buginmenIconVideo.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="clients.html" class="btn btn-blue">
+            <span>Подробнее</span>
+            <i class="icon next-blue"></i>
+          </a>
+        </div>
+      </section>
       <section class="services bgGrey">
         <div class="container">
           <h2 class="news_title">Технологии</h2>
@@ -880,6 +987,15 @@
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
+    <script src="js/jquery-modal-video.min.js"></script>
+    <script>
+      $(".js-video-button").modalVideo({
+        youtube: {
+          controls: 0,
+          nocookie: true,
+        },
+      });
+    </script>
     <script src="js/libs.min.js"></script>
     <script src="slick/slick.js"></script>
     <script src="js/wow.min.js"></script>
@@ -970,6 +1086,47 @@
         arrows: true,
         centerMode: false,
         focusOnSelect: true,
+        dots: false,
+        responsive: [
+          {
+            breakpoint: 1190,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ],
+      });
+
+      $(".news-sl2").slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        centerMode: false,
         dots: false,
         responsive: [
           {
